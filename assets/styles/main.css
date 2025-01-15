@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --bg-color:#ffffff;
+    --primary-color:#FFB568;
+    --secondary-color:#BFBFBF;
+    --input-color:#2E2E2E;
+    --button-color:#2B2B2B;
+    --border-color:#F0F0F0;
+    --text-color:#2E2E2E;
+    --fs-36px:36px;
+    --fs-24px:24px;
+    --fs-20px:20px;
+    --fs-16px:16px;
+    --fs-14px:14px;
+    --fw-600:600;
+    --fw-400:500;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: "Poppins", serif;
+    font-weight: var(--fw-400);
+    background-color: var(--bg-color);
+}
+body.theme{
+    --bg-color:#1F1F1F;
+    --primary-color:#EFBE8A;
+    --button-color:var(--primary-color);
+    --border-color:#333333;
+    --text-color:#F2F2F2;
+}
+.container {
+    margin: auto;
+    width: min(1050px , 100% - 40px);
+}
+ul{
+    list-style: none;
+}
+a{
+    font: inherit;
+    color: inherit;
+    text-decoration: none;
+}
+button{
+    font: inherit;
+    border: none;
+    outline: none;
+    color: inherit;
+}
+img{
+    max-width: 100%;
+}
+header{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: 25px 0;
+}
+header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .container  .toggle-icon{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+header .container .logo a{
+    font-size: var(--fs-24px);
+    font-size: clamp(var(--fs-20px),5vw,var(--fs-24px));
+    font-weight: var(--fw-700);
+    color: var(--primary-color);
+}
+.data-list{
+    padding: 50px 0;
+}
+.data-list .container .user-details .user-data{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:40px 220px;
+    padding: 20px 30px;
+    border: 1px solid var(--border-color);
+}
+.data-list .container .user-details .user-data .user-image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.data-list .container .user-details .user-data img{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+}
+.data-list .container .user-details .user-data h1{
+    font-size: clamp(var(--fs-24px),5vw,var(--fs-36px));
+    color: var(--text-color);
+}
+.data-list .container .user-details .user-info{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 18px;
+    color: var(--text-color);
+}
+.data-list .container .user-details .user-info>*:not(.show-profile){
+    max-width: 300px;
+    width: 100%;
+}
+.data-list .container .user-details .user-info .title{
+    display: block;
+    margin-bottom: 5px;
+    font-size: var(--fs-20px);
+    font-weight: var(--fw-600);
+}
+.data-list .container .user-details .user-info .description{
+    font-size: var(--fs-14px);
+    font-weight: var(--fw-400);
+}
+.data-list .container .user-details .user-info .show-profile{
+    padding: 10px 25px;
+    border-radius: 5px;
+    background-color: var(--button-color);
+    color:var(--bg-color) ;
+    cursor: pointer;
+}
+.data-list .container .user-details .profile-details{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 20px 30px;
+    margin: 30px 0 ;
+    border: 1px solid var(--border-color);
+}
+.data-list .container .user-details .profile-details span{
+    padding: 10px 25px;
+    border-radius: 5px;
+    background-color: var(--button-color);
+    color:var(--bg-color) ;
+}
+.data-list .container .user-details .repos-data ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 10px;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    font-weight: var(--fw-600);
+}
+.data-list .container .user-details .repos-data ul li span{
+    font-size: var(--fs-20px);
+    color: var(--text-color);
+}
+.data-list .container .user-details .repos-data ul li .links{
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.data-list .container .user-details .repos-data ul li .links a{
+    padding: 10px 25px;
+    border-radius: 5px;
+    background-color: var(--button-color);
+    color:var(--bg-color) ;
+}
